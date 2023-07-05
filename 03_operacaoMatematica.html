@@ -8,11 +8,55 @@
     */
 
     //ENTRADA
-
-
+    const numero1 = Number(prompt('Insira um número:').trim().replace(',', '.'));
+    const numero2 = Number(prompt('Insira um número:').trim().replace(',', '.'));
+    const operacao = (prompt('Qual operação você deseja realizar? Responda +, -, * ou /').trim());
     //PROCESSAMENTO
+    let conta;
+    let mensagemFinal = '';
+    switch (operacao) {
+        case '+':
+            conta = numero1 + numero2;
+            break;
+        case '-':
+            conta = numero1 - numero2;
+            break;
+        case '*':
+            conta = numero1 * numero2;
+            break;
+        case '/':
+            conta = numero1 / numero2;
+            break;
+        default:
+            alert('Valor inválido!');
+    }
+    mensagemFinal = `${conta}`;
+    switch (conta%2) {
+        case 0:
+            mensagemFinal += '\nPar.';
+            break;
+        default:
+            mensagemFinal +='\nÍmpar';
+            break;
+    }
+    switch (conta > 0) {
+        case true:
+            mensagemFinal += '\nPositivo';
+            break;
+        default:
+            mensagemFinal +='\nNegativo';
+            break;
+    }
+    switch (Number.isInteger(conta)) {
+        case true:
+            mensagemFinal += '\nInteiro';
+            break;
+        default:
+            mensagemFinal += '\nDecimal';
+            break;
+    }
 
-    
+    alert(mensagemFinal);
     //SAÍDA
 
 </script>

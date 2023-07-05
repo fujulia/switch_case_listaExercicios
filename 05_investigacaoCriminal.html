@@ -11,9 +11,55 @@
     */
 
     //ENTRADA
+    const telefone = prompt('Telefonou para vítima? RESPONDA SIM OU NÃO').trim().toLowerCase().replace('ã', 'a');
+    const local = prompt('Esteve no local do crime? RESPONDA SIM OU NÃO').trim().toLowerCase().replace('ã', 'a');
+    const moraPerto = prompt('Mora perto da vítima? RESPONDA SIM OU NÃO').trim().toLowerCase().replace('ã', 'a');
+    const devia = prompt('Devia para a vítima? RESPONDA SIM OU NÃO').trim().toLowerCase().replace('ã', 'a');
+    const trabalho = prompt('Já trabalhou com a vítima? RESPONDA SIM OU NÃO').trim().toLowerCase().replace('ã', 'a');
 
     
     //PROCESSAMENTO
+    let contador = 0
+    switch (telefone) {
+        case 'sim':
+            contador++;
+            break;
+    }
+    switch (local) {
+        case 'sim':
+            contador++;
+            break;
+    }
+    switch (moraPerto) {
+        case 'sim':
+            contador++;
+            break;
+    }
+    switch (devia) {
+        case 'sim':
+            contador++;
+            break;
+    }
+    switch (trabalho) {
+        case 'sim':
+            contador++
+            break;
+    }
+    switch (contador) {
+        case 2:
+            alert('SUSPEITO');
+            break;
+        case 3:
+        case 4:
+            alert('CÚMPLICE');
+            break;
+        case 5:
+            alert('ASSASSINO');
+            break;
+        default:
+            alert('INOCENTE');
+            break;
+    }
 
 
     //SAÍDA

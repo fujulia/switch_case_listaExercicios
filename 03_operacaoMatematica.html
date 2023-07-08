@@ -30,29 +30,29 @@
         default:
             alert('Valor inválido!');
     }
-    mensagemFinal = `${conta}`;
+    mensagemFinal = `Resultado = ${conta};`;
     switch (conta%2) {
         case 0:
-            mensagemFinal += '\nPar.';
+            mensagemFinal += '\nPar;';
             break;
         default:
-            mensagemFinal +='\nÍmpar';
+            mensagemFinal +='\nÍmpar;';
             break;
     }
     switch (conta > 0) {
         case true:
-            mensagemFinal += '\nPositivo';
+            mensagemFinal += '\nPositivo;';
             break;
         default:
-            mensagemFinal +='\nNegativo';
+            mensagemFinal +='\nNegativo;';
             break;
     }
     switch (Number.isInteger(conta)) {
         case true:
-            mensagemFinal += '\nInteiro';
+            mensagemFinal += '\nInteiro.';
             break;
         default:
-            mensagemFinal += '\nDecimal';
+            mensagemFinal += '\nDecimal.';
             break;
     }
 
